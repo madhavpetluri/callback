@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function step1(callback){
+            setTimeout(()=> {
+                console.log("Place orde")
+                callback()
+            },1000);
+        }
+        function step2(callback){
+            setTimeout(()=> {
+                console.log("Prepare pizza ")
+                callback()
+            },2000);
+        }
+        function step3(callback){
+            setTimeout(()=> {
+                console.log(" Bake pizza")
+                callback()
+            },3000);
+        }
+        function step4(callback){
+            setTimeout(()=> {
+                console.log(" Pack pizza")
+                callback()
+            },4000);
+        }
+        function step5(){
+            setTimeout(()=> {
+                console.log("Deliver pizza")
+            },5000);
+        }
+
+
+        step1(()=>{
+            step2(()=>{
+                step3(()=>{
+                    step4(()=>{
+                        step5(()=>{
+
+                        })
+                    })
+                })
+            })
+        })
+    </script>
+</body>
+</html>
